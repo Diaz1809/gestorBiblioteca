@@ -105,7 +105,7 @@
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(332, 47);
             btnLogin.TabIndex = 4;
-            btnLogin.Text = "Iniciar Sesión";
+            btnLogin.Text = "Subida a GitHub";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
