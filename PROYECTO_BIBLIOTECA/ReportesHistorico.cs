@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PROYECTO_BIBLIOTECA
 {
-    public partial class menuPrincipal : Form
+    public partial class ReportesHistorico : Form
     {
-        public menuPrincipal()
+        public ReportesHistorico()
         {
             InitializeComponent();
         }
@@ -20,17 +20,6 @@ namespace PROYECTO_BIBLIOTECA
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            ReportesHistorico vistaReportes = new ReportesHistorico();
-            vistaReportes.Show(); // Abre el formulario de reportes
         }
     }
 }
