@@ -34,10 +34,10 @@ namespace PROYECTO_BIBLIOTECA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           string usuario = txtUsuario.Text.Trim();
-           string clave = txtContraseña.Text.Trim();
+            string usuario = txtUsuario.Text.Trim();
+            string clave = txtContraseña.Text.Trim();
 
-            if (usuario== "admin" && clave == "1234")
+            if (usuario == "admin" && clave == "1234")
             {
                 MessageBox.Show("Bienvenido " + usuario, "Acceso correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -49,6 +49,11 @@ namespace PROYECTO_BIBLIOTECA
             {
                 MessageBox.Show("Usuario o Contraseña incorrectos", "Error", MessageBoxButtons.OK);
             }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

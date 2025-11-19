@@ -46,8 +46,9 @@
             panelIzquierdo.BackgroundImageLayout = ImageLayout.Stretch;
             panelIzquierdo.Dock = DockStyle.Left;
             panelIzquierdo.Location = new Point(0, 0);
+            panelIzquierdo.Margin = new Padding(3, 2, 3, 2);
             panelIzquierdo.Name = "panelIzquierdo";
-            panelIzquierdo.Size = new Size(450, 461);
+            panelIzquierdo.Size = new Size(394, 346);
             panelIzquierdo.TabIndex = 1;
             // 
             // panelDerecho
@@ -61,16 +62,17 @@
             panelDerecho.Controls.Add(label1);
             panelDerecho.Dock = DockStyle.Fill;
             panelDerecho.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            panelDerecho.Location = new Point(450, 0);
+            panelDerecho.Location = new Point(394, 0);
+            panelDerecho.Margin = new Padding(3, 2, 3, 2);
             panelDerecho.Name = "panelDerecho";
-            panelDerecho.Size = new Size(434, 461);
+            panelDerecho.Size = new Size(380, 346);
             panelDerecho.TabIndex = 2;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(57, 167);
+            label4.Location = new Point(50, 125);
             label4.Name = "label4";
             label4.Size = new Size(67, 15);
             label4.TabIndex = 6;
@@ -81,7 +83,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(57, 113);
+            label3.Location = new Point(50, 85);
             label3.Name = "label3";
             label3.Size = new Size(47, 15);
             label3.TabIndex = 6;
@@ -91,7 +93,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(166, 233);
+            label2.Location = new Point(145, 175);
             label2.Name = "label2";
             label2.Size = new Size(223, 15);
             label2.TabIndex = 5;
@@ -101,9 +103,10 @@
             // 
             btnLogin.BackColor = Color.DarkOrange;
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(57, 290);
+            btnLogin.Location = new Point(50, 218);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(332, 47);
+            btnLogin.Size = new Size(290, 35);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Subida a GitHub";
             btnLogin.UseVisualStyleBackColor = false;
@@ -112,26 +115,29 @@
             // txtContraseña
             // 
             txtContraseña.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtContraseña.Location = new Point(57, 185);
+            txtContraseña.Location = new Point(50, 139);
+            txtContraseña.Margin = new Padding(3, 2, 3, 2);
             txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(332, 22);
+            txtContraseña.Size = new Size(291, 22);
             txtContraseña.TabIndex = 3;
             txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtUsuario
             // 
             txtUsuario.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(57, 131);
+            txtUsuario.Location = new Point(50, 98);
+            txtUsuario.Margin = new Padding(3, 2, 3, 2);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(332, 22);
+            txtUsuario.Size = new Size(291, 22);
             txtUsuario.TabIndex = 2;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.MidnightBlue;
-            label1.Location = new Point(109, 25);
+            label1.Location = new Point(95, 19);
             label1.Name = "label1";
             label1.Size = new Size(247, 58);
             label1.TabIndex = 1;
@@ -139,12 +145,13 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 461);
+            ClientSize = new Size(774, 346);
             Controls.Add(panelDerecho);
             Controls.Add(panelIzquierdo);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestor de Biblioteca Digital";
