@@ -106,6 +106,7 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(3, 12);
@@ -116,6 +117,7 @@
             // 
             // agregar
             // 
+            agregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             agregar.Location = new Point(3, 170);
             agregar.Name = "agregar";
             agregar.Size = new Size(93, 29);
@@ -126,6 +128,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = SystemColors.ControlLightLight;
             panel2.Controls.Add(buscar);
             panel2.Controls.Add(limpiar);
@@ -161,6 +164,7 @@
             // 
             // comboBox4
             // 
+            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox4.FormattingEnabled = true;
             comboBox4.Location = new Point(488, 15);
             comboBox4.Name = "comboBox4";
@@ -171,6 +175,7 @@
             // 
             // comboBox3
             // 
+            comboBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox3.FormattingEnabled = true;
             comboBox3.Location = new Point(336, 15);
             comboBox3.Name = "comboBox3";
@@ -181,6 +186,7 @@
             // 
             // comboBox2
             // 
+            comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
             comboBox2.Location = new Point(170, 15);
             comboBox2.Name = "comboBox2";
@@ -202,6 +208,7 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToOrderColumns = true;
+            dataGridView1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cliente, Tipo, DNI, Distrito, Encargado, Tipolibro, Nombrelibro, Fechainicio, Fechafin, Estado });
             dataGridView1.Location = new Point(3, 216);
@@ -279,6 +286,7 @@
             Controls.Add(splitContainer1);
             Name = "menuPrincipal";
             Text = "menuPrincipal";
+            Load += menuPrincipal_Load_1;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);

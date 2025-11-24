@@ -106,7 +106,6 @@ namespace PROYECTO_BIBLIOTECA
 
         private void menuPrincipal_Load(object sender, EventArgs e)
         {
-
             dataGridView1.ColumnCount = 10;
             dataGridView1.Columns[0].Name = "Cliente";
             dataGridView1.Columns[1].Name = "Tipo";
@@ -120,33 +119,24 @@ namespace PROYECTO_BIBLIOTECA
             dataGridView1.Columns[9].Name = "Estado";
 
 
+            string carpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "BibliotecaSolicitudes");
+            string rutaArchivo = Path.Combine(carpeta, "solicitudes.txt");
 
-            string[] fila1 = { "Juan Pérez", "Estudiante", "12345678", "Lima", "Ana Torres", "Científico", "", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila2 = { "María López", "Profesor", "87654321", "Callao", "Luis Gómez", "Literatura", "Parque de los lobos", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila3 = { "Juan Pérez", "Estudiante", "12345678", "Lima", "Ana Torres", "Científico", "", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila4 = { "María López", "Profesor", "87654321", "Callao", "Luis Gómez", "Literatura", "Parque de los lobos", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila5 = { "Juan Pérez", "Estudiante", "12345678", "Lima", "Ana Torres", "Científico", "", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila6 = { "María López", "Profesor", "87654321", "Callao", "Luis Gómez", "Literatura", "Parque de los lobos", "16/11/2025", "20/11/2025", "Pendiente" };
-            string[] fila7 = { "Juan Pérez", "Estudiante", "12345678", "Lima", "Ana Torres", "Científico", "", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila8 = { "María López", "Profesor", "87654321", "Callao", "Luis Gómez", "Literatura", "Parque de los lobos", "16/11/2025", "20/11/2025", "Pendiente" };
-            string[] fila9 = { "Juan Pérez", "Estudiante", "12345678", "Lima", "Ana Torres", "Científico", "", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila10 = { "María López", "Profesor", "87654321", "Callao", "Luis Gómez", "Literatura", "Parque de los lobos", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila11 = { "Juan Pérez", "Estudiante", "12345678", "Lima", "Ana Torres", "Científico", "", "16/11/2025", "20/11/2025", "Entregado" };
-            string[] fila12 = { "María López", "Profesor", "87654321", "Callao", "Luis Gómez", "Literatura", "Parque de los lobos", "16/11/2025", "20/11/2025", "Pendiente" };
+            if (File.Exists(rutaArchivo))
+            {
+                string[] lineas = File.ReadAllLines(rutaArchivo);
 
-            dataGridView1.Rows.Add(fila1);
-            dataGridView1.Rows.Add(fila2);
-            dataGridView1.Rows.Add(fila3);
-            dataGridView1.Rows.Add(fila4);
-            dataGridView1.Rows.Add(fila5);
-            dataGridView1.Rows.Add(fila6);
-            dataGridView1.Rows.Add(fila7);
-            dataGridView1.Rows.Add(fila8);
-            dataGridView1.Rows.Add(fila9);
-            dataGridView1.Rows.Add(fila10);
-            dataGridView1.Rows.Add(fila11);
-            dataGridView1.Rows.Add(fila12);
+                foreach (string linea in lineas)
+                {
+                    string[] campos = linea.Split('|');
+                    if (campos.Length == 10)
+                    {
+                        dataGridView1.Rows.Add(campos);
+                    }
+                }
+            }
         }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -269,9 +259,74 @@ namespace PROYECTO_BIBLIOTECA
         private void agregar_Click(object sender, EventArgs e)
         {
             RegistroSolicitud formularioRegistro = new RegistroSolicitud();
-            formularioRegistro.ShowDialog(); // Abre el formulario como modal
+
+            if (formularioRegistro.ShowDialog() == DialogResult.OK)
+            {
+                Solicitud nueva = formularioRegistro.NuevaSolicitud;
+
+                if (nueva != null)
+                {
+                    string[] fila = {
+                nueva.Cliente,
+                nueva.Tipo,
+                nueva.Dni,
+                nueva.Distrito,
+                nueva.Encargado,
+                nueva.TipoLibro,
+                nueva.NombreLibro,
+                nueva.FechaInicio,
+                nueva.FechaFin,
+                nueva.Estado
+            };
+
+                    dataGridView1.Rows.Add(fila);
+
+                    // Carpeta principal
+                    string carpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "BibliotecaSolicitudes");
+                    Directory.CreateDirectory(carpeta);
+
+                    // Guardar en archivo de registros
+                    string rutaArchivo = Path.Combine(carpeta, "solicitudes.txt");
+                    string linea = string.Join("|", fila);
+                    File.AppendAllText(rutaArchivo, linea + Environment.NewLine);
+
+                    // Carpeta de boletas
+                    string carpetaBoletas = Path.Combine(carpeta, "Boletas");
+                    Directory.CreateDirectory(carpetaBoletas);
+
+                    // Crear contenido de boleta
+                    string contenidoBoleta = $@"
+📚 BOLETA DE REGISTRO DE SOLICITUD
+
+Cliente: {nueva.Cliente}
+Tipo: {nueva.Tipo}
+DNI: {nueva.Dni}
+Distrito: {nueva.Distrito}
+Encargado: {nueva.Encargado}
+Tipo de libro: {nueva.TipoLibro}
+Nombre del libro: {nueva.NombreLibro}
+Fecha inicio: {nueva.FechaInicio}
+Fecha fin: {nueva.FechaFin}
+Estado: {nueva.Estado}
+
+Gracias por usar el sistema de biblioteca.
+";
+
+                    // Guardar boleta
+                    string nombreBoleta = $"boleta_{nueva.Dni}_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+                    string rutaBoleta = Path.Combine(carpetaBoletas, nombreBoleta);
+                    File.WriteAllText(rutaBoleta, contenidoBoleta);
+
+                    // Abrir boleta automáticamente
+                    System.Diagnostics.Process.Start("notepad.exe", rutaBoleta);
+                }
+            }
         }
 
+        private void menuPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
