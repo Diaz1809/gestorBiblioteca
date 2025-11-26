@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Electronic\\Desktop\\Repobiblioteca2\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {}
+    "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Electronic\\Desktop\\Repobiblioteca2\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {
+    "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Electronic\\Desktop\\Repobiblioteca2\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
+        "projectUniqueName": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
         "projectName": "PROYECTO_BIBLIOTECA",
-        "projectPath": "C:\\Users\\Electronic\\Desktop\\Repobiblioteca2\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
-        "packagesPath": "C:\\Users\\Electronic\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Electronic\\Desktop\\Repobiblioteca2\\PROYECTO_BIBLIOTECA\\obj\\",
+        "projectPath": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
+        "packagesPath": "C:\\Users\\diazg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Electronic\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\diazg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +40,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -68,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -14,5 +14,8 @@
     <Compile Update="menuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ReportesHistorico1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

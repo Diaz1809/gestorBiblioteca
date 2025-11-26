@@ -52,6 +52,7 @@
             Fechafin = new DataGridViewTextBoxColumn();
             Estado = new DataGridViewTextBoxColumn();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -64,11 +65,13 @@
             // 
             splitContainer1.Dock = DockStyle.Fill;
             splitContainer1.Location = new Point(0, 0);
+            splitContainer1.Margin = new Padding(3, 4, 3, 4);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.DarkBlue;
+            splitContainer1.Panel1.Controls.Add(label2);
             splitContainer1.Panel1.Controls.Add(reports);
             splitContainer1.Panel1.Controls.Add(panel1);
             // 
@@ -79,8 +82,9 @@
             splitContainer1.Panel2.Controls.Add(panel2);
             splitContainer1.Panel2.Controls.Add(dataGridView1);
             splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
-            splitContainer1.Size = new Size(800, 450);
-            splitContainer1.SplitterDistance = 172;
+            splitContainer1.Size = new Size(914, 600);
+            splitContainer1.SplitterDistance = 196;
+            splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 1;
             // 
             // reports
@@ -88,7 +92,7 @@
             reports.AutoSize = true;
             reports.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             reports.ForeColor = SystemColors.ControlLightLight;
-            reports.Location = new Point(12, 103);
+            reports.Location = new Point(12, 160);
             reports.Name = "reports";
             reports.Size = new Size(120, 17);
             reports.TabIndex = 0;
@@ -99,9 +103,10 @@
             // 
             panel1.BackgroundImage = Properties.Resources.sise;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(3, 12);
+            panel1.Location = new Point(3, 16);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(166, 46);
+            panel1.Size = new Size(190, 61);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -109,7 +114,7 @@
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 12);
+            label1.Location = new Point(3, 16);
             label1.Name = "label1";
             label1.Size = new Size(154, 21);
             label1.TabIndex = 3;
@@ -118,9 +123,10 @@
             // agregar
             // 
             agregar.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            agregar.Location = new Point(3, 170);
+            agregar.Location = new Point(3, 227);
+            agregar.Margin = new Padding(3, 4, 3, 4);
             agregar.Name = "agregar";
-            agregar.Size = new Size(93, 29);
+            agregar.Size = new Size(106, 39);
             agregar.TabIndex = 2;
             agregar.Text = "Agregar";
             agregar.UseVisualStyleBackColor = true;
@@ -136,17 +142,19 @@
             panel2.Controls.Add(comboBox3);
             panel2.Controls.Add(comboBox2);
             panel2.Controls.Add(comboBox1);
-            panel2.Location = new Point(3, 52);
+            panel2.Location = new Point(3, 69);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(618, 96);
+            panel2.Size = new Size(706, 128);
             panel2.TabIndex = 1;
             panel2.Paint += splitContainer1_Panel2_Paint;
             // 
             // buscar
             // 
-            buscar.Location = new Point(534, 58);
+            buscar.Location = new Point(610, 77);
+            buscar.Margin = new Padding(3, 4, 3, 4);
             buscar.Name = "buscar";
-            buscar.Size = new Size(75, 23);
+            buscar.Size = new Size(86, 31);
             buscar.TabIndex = 6;
             buscar.Text = "Buscar";
             buscar.UseVisualStyleBackColor = true;
@@ -154,9 +162,10 @@
             // 
             // limpiar
             // 
-            limpiar.Location = new Point(440, 58);
+            limpiar.Location = new Point(503, 77);
+            limpiar.Margin = new Padding(3, 4, 3, 4);
             limpiar.Name = "limpiar";
-            limpiar.Size = new Size(75, 23);
+            limpiar.Size = new Size(86, 31);
             limpiar.TabIndex = 5;
             limpiar.Text = "Limpiar";
             limpiar.UseVisualStyleBackColor = true;
@@ -166,9 +175,10 @@
             // 
             comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(488, 15);
+            comboBox4.Location = new Point(558, 20);
+            comboBox4.Margin = new Padding(3, 4, 3, 4);
             comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(121, 23);
+            comboBox4.Size = new Size(138, 28);
             comboBox4.TabIndex = 3;
             comboBox4.Text = "Estado";
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
@@ -177,9 +187,10 @@
             // 
             comboBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(336, 15);
+            comboBox3.Location = new Point(384, 20);
+            comboBox3.Margin = new Padding(3, 4, 3, 4);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(136, 23);
+            comboBox3.Size = new Size(155, 28);
             comboBox3.TabIndex = 2;
             comboBox3.Text = "Tipo de libro";
             comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
@@ -188,9 +199,10 @@
             // 
             comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(170, 15);
+            comboBox2.Location = new Point(194, 20);
+            comboBox2.Margin = new Padding(3, 4, 3, 4);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(150, 23);
+            comboBox2.Size = new Size(171, 28);
             comboBox2.TabIndex = 1;
             comboBox2.Text = "Encargado";
             comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
@@ -198,9 +210,10 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(13, 15);
+            comboBox1.Location = new Point(15, 20);
+            comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(140, 23);
+            comboBox1.Size = new Size(159, 28);
             comboBox1.TabIndex = 0;
             comboBox1.Text = "Cliente";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
@@ -211,10 +224,11 @@
             dataGridView1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Cliente, Tipo, DNI, Distrito, Encargado, Tipolibro, Nombrelibro, Fechainicio, Fechafin, Estado });
-            dataGridView1.Location = new Point(3, 216);
+            dataGridView1.Location = new Point(3, 288);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(618, 234);
+            dataGridView1.Size = new Size(706, 312);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -278,12 +292,25 @@
             Estado.Name = "Estado";
             Estado.ReadOnly = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(12, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(127, 17);
+            label2.TabIndex = 1;
+            label2.Text = "Gestion de Clientes";
+            label2.Click += label2_Click;
+            // 
             // menuPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(splitContainer1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "menuPrincipal";
             Text = "menuPrincipal";
             Load += menuPrincipal_Load_1;
@@ -324,5 +351,6 @@
         private ComboBox comboBox2;
         private Label label1;
         private Button agregar;
+        private Label label2;
     }
 }

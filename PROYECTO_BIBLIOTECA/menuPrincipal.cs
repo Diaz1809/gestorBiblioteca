@@ -18,6 +18,8 @@ namespace PROYECTO_BIBLIOTECA
         public menuPrincipal()
         {
             InitializeComponent();
+
+
             this.Load += new EventHandler(menuPrincipal_Load); // Asocia el evento Load
                                                                // Obtener encargados únicos desde la grilla
             var encargados = new HashSet<string>();
@@ -103,6 +105,12 @@ namespace PROYECTO_BIBLIOTECA
 
             //----------------------------------------------------------------------------------
         }
+        private void CargarUserControl(UserControl uc)
+        {
+            splitContainer1.Panel2.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Add(uc);
+        }
 
         private void menuPrincipal_Load(object sender, EventArgs e)
         {
@@ -150,8 +158,7 @@ namespace PROYECTO_BIBLIOTECA
 
         private void label1_Click(object sender, EventArgs e)
         {
-            ReportesHistorico vistaReportes = new ReportesHistorico();
-            vistaReportes.Show(); // Abre el formulario de reportes
+            CargarUserControl(new ReportesHistorico1());
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -326,6 +333,12 @@ Gracias por usar el sistema de biblioteca.
         private void menuPrincipal_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 
