@@ -1,0 +1,15 @@
+
+📚 BOLETA DE REGISTRO DE SOLICITUD
+
+Cliente: Carlos Ramírez
+Tipo: Profesor
+DNI: 48763412
+Distrito: San Juan de Lurigancho
+Encargado: Julio Bazán
+Tipo de libro: Literatura
+Nombre del libro: Cien años de soledad
+Fecha inicio: 23/11/2025
+Fecha fin: 23/11/2026
+Estado: Pendiente
+
+Gracias por usar el sistema de biblioteca.
