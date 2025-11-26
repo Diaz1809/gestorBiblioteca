@@ -1,0 +1,15 @@
+
+📚 BOLETA DE REGISTRO DE SOLICITUD
+
+Cliente: Juan Pérez
+Tipo: Estudiante
+DNI: 12345678
+Distrito: San Juan de Lurigancho
+Encargado: Julio Bazán
+Tipo de libro: Literatura
+Nombre del libro: Don Quijote
+Fecha inicio: 23/11/2025
+Fecha fin: 23/11/2028
+Estado: Pendiente
+
+Gracias por usar el sistema de biblioteca.

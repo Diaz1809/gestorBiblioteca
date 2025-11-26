@@ -1,0 +1,15 @@
+
+📚 BOLETA DE REGISTRO DE SOLICITUD
+
+Cliente: Lucía Fernández
+Tipo: Libre
+DNI: 1234567852
+Distrito: San Juan de Lurigancho
+Encargado: Julio Bazán
+Tipo de libro: Física
+Nombre del libro: Termodinámica
+Fecha inicio: 23/11/2022
+Fecha fin: 23/11/2023
+Estado: Pendiente
+
+Gracias por usar el sistema de biblioteca.
