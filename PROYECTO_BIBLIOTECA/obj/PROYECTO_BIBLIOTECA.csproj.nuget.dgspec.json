@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {}
+    "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\bibl\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {
+    "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\bibl\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
+        "projectUniqueName": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\bibl\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
         "projectName": "PROYECTO_BIBLIOTECA",
-        "projectPath": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
+        "projectPath": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\bibl\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\PROYECTO_BIBLIOTECA.csproj",
         "packagesPath": "C:\\Users\\diazg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\BIBLIOTECA\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\obj\\",
+        "outputPath": "C:\\Users\\diazg\\OneDrive\\Desktop\\sise\\ciclo 3\\bibl\\gestorBiblioteca\\PROYECTO_BIBLIOTECA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diazg\\AppData\\Roaming\\NuGet\\NuGet.Config",
